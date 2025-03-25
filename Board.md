@@ -39,3 +39,27 @@ minikube version
 ```sh
 minikube start
 ```
+
+### 5. Kubernetes commands
+```sh
+# view kubectl config
+kubectl config view
+
+# view cluster info
+kubectl cluster-info
+
+# get node info
+kubectl get nodes
+
+# get pod info
+kubectl get pod
+
+# minikube status
+minikube status
+
+# minikube add-ons
+minikube addons list
+
+# minikube dashboard
+minikube dashboard
+```

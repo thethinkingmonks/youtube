@@ -3,6 +3,7 @@
 2. Install kubectl
 3. Install minikube
 4. Create cluster
+5. Kubernetes commands
    
 ### 1. Install docker
 ```sh

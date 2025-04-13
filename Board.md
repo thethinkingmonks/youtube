@@ -1,3 +1,50 @@
+# Board Number - 00002 - Creation of Pods
+1. Start cluster
+2. Check status of cluster
+3. Stop cluster
+4. Delete cluster
+5. Pod manifest file
+6. Run pod
+7. Check status of pods
+
+### 1. Start cluster
+```sh
+minikube start
+```
+
+### 2. Check status of cluster
+```sh
+minikube status
+```
+
+### 3. Stop cluster
+```sh
+minikube stop
+```
+
+### 4. Delete cluster
+```sh
+minikube delete
+```
+
+### 5. Pod manifest file
+```yaml
+apiVersion:
+kind: 
+metadata:
+spec:
+```
+### 6. Run the pod
+```sh
+kubectl run nginx --image=nginx --dry-run=client -o yaml > 0001-pods.yaml
+kubectl apply -f 0001-pods.yaml
+kubectl get pods
+kubectl describe pods 
+```
+### 7. Check the status
+```sh
+kubectl get pods
+```
 # Board Number - 00001 - Installation of Minikube
 1. Install docker
 2. Install kubectl

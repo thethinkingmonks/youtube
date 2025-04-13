@@ -7,6 +7,7 @@
 6. Run pod
 7. Check status of pods
 8. Debugging image download error
+9. Add a worker node
 
 ### 1. Start cluster
 ```sh
@@ -53,6 +54,11 @@ kubectl get pods
  docker login
  docker login -u thinkingmonks
  ```
+
+### 9. Add worker node
+```sh
+minikube node add
+```
 
 # Board Number - 00001 - Installation of Minikube
 1. Install docker

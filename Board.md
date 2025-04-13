@@ -6,6 +6,7 @@
 5. Pod manifest file
 6. Run pod
 7. Check status of pods
+8. Debugging image download error
 
 ### 1. Start cluster
 ```sh
@@ -45,6 +46,14 @@ kubectl describe pods
 ```sh
 kubectl get pods
 ```
+
+### 8. Debugging image download error
+```sh
+ curl -I https://registry-1.docker.io/v2/
+ docker login
+ docker login -u thinkingmonks
+ ```
+
 # Board Number - 00001 - Installation of Minikube
 1. Install docker
 2. Install kubectl

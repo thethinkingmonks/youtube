@@ -1,3 +1,58 @@
+# Board Number - 00003 - Create Replicaset
+A **ReplicaSet** in Kubernetes is a resource that ensures a specified number of pod replicas are running at any given time. It is primarily used to maintain the desired state of pods, ensuring high availability and fault tolerance.
+
+### Key Features of a ReplicaSet:
+1. Pod Replication
+2. Self-Healing
+3. Selector Matching
+4. Declarative Management
+
+
+```yaml
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginx-replicaset
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+```
+
+### Commands to Work with ReplicaSets:
+- **Create a ReplicaSet:**
+```sh
+kubectl apply -f replicaset.yaml
+```
+- **View ReplicaSets:**
+```sh
+kubectl get replicaset
+```
+- **Describe a ReplicaSet:**
+```sh
+kubectl describe replicaset <replicaset-name>
+```
+- **Delete a ReplicaSet:**
+```sh
+kubectl delete replicaset <replicaset-name>
+```
+
+- **Change replica on the fly**
+```sh
+kubectl scale replicaset nginx-replicaset --replicas=5
+```
+
 # Board Number - 00002 - Creation of Pods
 1. Start cluster
 2. Check status of cluster

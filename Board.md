@@ -35,14 +35,17 @@ spec:
 ```sh
 kubectl apply -f replicaset.yaml
 ```
+
 - **View ReplicaSets:**
 ```sh
 kubectl get replicaset
 ```
+
 - **Describe a ReplicaSet:**
 ```sh
 kubectl describe replicaset <replicaset-name>
 ```
+
 - **Delete a ReplicaSet:**
 ```sh
 kubectl delete replicaset <replicaset-name>

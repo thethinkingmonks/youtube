@@ -1,3 +1,22 @@
+# Board Number - 00004 - How to install vagrant
+1. Install virtual box
+```
+https://www.virtualbox.org/wiki/Downloads
+```
+
+2. Download and install vargrant
+```
+https://developer.hashicorp.com/vagrant/install
+```
+
+3. Open the powershell and run the following commands
+```sh
+vagrant box add ubuntu/noble64
+vagrant init ubuntu/noble64
+vagrant plugin install vagrant-vbguest
+vagrant up
+```  
+
 # Board Number - 00003 - Create Replicaset
 A **ReplicaSet** in Kubernetes is a resource that ensures a specified number of pod replicas are running at any given time. It is primarily used to maintain the desired state of pods, ensuring high availability and fault tolerance.
 

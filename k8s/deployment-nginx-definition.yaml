@@ -1,24 +1,34 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: example-deployment
+  name: mydeployment-nginx
   labels:
-    app: example-app
+    app: myapp-nginx
   annotations:
     kubernetes.io/change-cause: "Nginx Service"
 spec:
   selector:
     matchLabels:
-      app: example-app
-  replicas: 5
+      app: myapp-nginx
+  replicas: 3
   template:
     metadata:
-      name: example-pod
+      name: mypod-nginx
       labels:
-        app: example-app
+        app: myapp-nginx
     spec:
       containers:
-      - name: example-container
+      - name: mycontainer-nginx
         image: nginx:latest # Use a different image for the example
+        volumeMounts:
+          - name: myvolume-nginx
+            mountPath: /etc/nginx/nginx.conf # destination path in the container
+            subPath: nginx-custom.conf
         ports:
-          - containerPort: 8080 # Expose port 8080 for Nginx
+          - containerPort: 1500 # Expose port 8080 for Nginx
+      volumes:
+        - name: myvolume-nginx
+          hostPath:
+            path: /data
+            type: Directory
+

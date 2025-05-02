@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: example-deployment
+  name: mydeployment-busybox
   labels:
-    app: example-app
+    app: myapp-busybox
   annotations:
     kubernetes.io/change-cause: "frontend validation update"
 spec:
   selector:
     matchLabels:
-      app: example-app
-  replicas: 10
+      app: myapp-busybox
+  replicas: 3
   template:
     metadata:
-      name: example-pod
+      name: mypod-busybox
       labels:
-        app: example-app
+        app: myapp-busybox
     spec:
       containers:
-      - name: example-container
+      - name: mycontainer-busybox
         image: busybox
         command: ["sh", "-c", "sleep 3600"]

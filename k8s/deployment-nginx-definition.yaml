@@ -20,6 +20,13 @@ spec:
       containers:
       - name: mycontainer-nginx
         image: nginx:latest # Use a different image for the example
+        command: ["/bin/sh", "-c"]
+        args: ["echo 'Hello from Nginx!' && nginx -g 'daemon off;'"]
+        env:
+          - name: MY_ENV_VAR
+            value: "Hello from Nginx!"
+          - name: LOCATION
+            value: "US"
         volumeMounts:
           - name: myvolume-nginx
             mountPath: /etc/nginx/nginx.conf # destination path in the container

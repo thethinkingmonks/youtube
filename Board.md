@@ -1,3 +1,14 @@
+# Board Number - 00006 - command, args and environment variable for pods
+1. **Entrypoint (command)**
+**Definition**: Overrides the default entrypoint of the container image.
+**Purpose**: Specifies the main executable or script that the container runs when it starts.
+**Behavior**: If defined, it completely replaces the default entrypoint specified in the container image.
+
+2. **Args**
+**Definition**: Appends or overrides the default arguments passed to the entrypoint.
+**Purpose**: Specifies additional arguments for the entrypoint command.
+**Behavior**: If command is not defined, args are passed to the default entrypoint of the container image.
+
 # Board Number - 00005 - Services
 
 ```plaintext

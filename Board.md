@@ -1,3 +1,39 @@
+# Board Number - 00005 - Services
+
+```plaintext
+                              +---------------+
+                              |  Client   |
+                              +---------------+
+                                       |
+                                       |  (Access NodePort)
+                                       v
+                              +---------------+
+                              |  Node      |
+                              |  (NodePort: 30007) |
+                              +---------------+
+                                       |
+                                       |  (Route to Service)
+                                       v
+                              +---------------+
+                              |  Service   |
+                              |  (port: 80)  |
+                              +---------------+
+                                       |
+                                       |  (Route to Pod)
+                                       v
+                              +---------------+
+                              |  Pod       |
+                              |  (targetPort: 80) |
+                              +---------------+
+                                       |
+                                       |  (Container listening)
+                                       v
+                              +---------------+
+                              |  Container  |
+                              |  (listening on 8080) |
+                              +---------------+
+```
+
 # Board Number - 00004 - How to install vagrant
 1. Install virtual box
 ```

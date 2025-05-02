@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: example-deployment
+  labels:
+    app: example-app
+  annotations:
+    kubernetes.io/change-cause: "Nginx Service"
+spec:
+  selector:
+    matchLabels:
+      app: example-app
+  replicas: 5
+  template:
+    metadata:
+      name: example-pod
+      labels:
+        app: example-app
+    spec:
+      containers:
+      - name: example-container
+        image: nginx:latest # Use a different image for the example
+        ports:
+          - containerPort: 8080 # Expose port 8080 for Nginx

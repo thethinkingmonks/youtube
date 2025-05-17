@@ -1,3 +1,13 @@
+# Board Number - 00007 - ConfigMaps
+- A ConfigMap is an API object used to store non-confidential data in key-value pairs.
+- A ConfigMap allows you to decouple environment-specific configuration from your container images, so that your applications are easily portable.
+- ConfigMap does not provide secrecy or encryption. If the data you want to store are confidential, use a Secret rather than a ConfigMap
+- Pods can consume ConfigMaps as 
+    1. Inside a container command and args
+    2. Environment variables for a container
+    3. Add a file in read-only volume, for the application to read
+    4. Write code to run inside the Pod that uses the Kubernetes API to read a ConfigMap
+
 # Board Number - 00006 - command, args and environment variable for pods
 1. **Entrypoint (command)**
 **Definition**: Overrides the default entrypoint of the container image.

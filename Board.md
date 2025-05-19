@@ -1,4 +1,4 @@
-# Board Number - 00007 - ConfigMaps
+# Board Number - 00009 - ConfigMaps
 - A ConfigMap is an API object used to store non-confidential data in key-value pairs.
 - A ConfigMap allows you to decouple environment-specific configuration from your container images, so that your applications are easily portable.
 - ConfigMap does not provide secrecy or encryption. If the data you want to store are confidential, use a Secret rather than a ConfigMap
@@ -7,6 +7,64 @@
     2. Environment variables for a container
     3. Add a file in read-only volume, for the application to read
     4. Write code to run inside the Pod that uses the Kubernetes API to read a ConfigMap
+# Board Number - 00008 - Create DataFrame by Various Methods
+##### 1. From Dictionary
+
+##### 2. From Lists
+
+##### 3. From CSV File
+
+##### 4. From Excel File
+
+##### 5. From NumPy Array
+
+##### 6. From List of Dictionaries
+
+##### 7. From JSON
+
+##### 8. Empty DataFrame
+
+##### 9. From Pandas Series
+
+# Board Number - 00007 - How to install ohmyposh
+1. copy the themes
+Windows Terminal themes: https://windowsterminalthemes.dev/
+2. search in settings of terminal in json setting for schemes and the themes value from step 1
+3. Check the colour schemes in the settings of terminal we should see the newly added scheme
+4. Download fonts (Fira Code)
+Nerd Fonts: https://github.com/ryanoasis/nerd-fonts/
+5. Install fonts (Fira Code)
+extract and install the fonts
+6. Check font face and see whether the node font is install or not
+7. Install 
+Oh My Posh: https://ohmyposh.dev/   
+8. Install on linux
+```sh
+sudo apt install unzip
+mkdir -p /usr/local/bin
+curl -s https://ohmyposh.dev/install.sh | bash -s -- -d /usr/local/bin
+#eval "$(oh-my-posh init bash --config /home/thinkingmonks/.cache/oh-my-posh/themes/clean-detailed.omp.json)"
+eval "$(oh-my-posh init bash --config /home/thinkingmonks/.cache/oh-my-posh/themes/chips.omp.json)"
+```
+9. change the default theme on the command line
+```powershell
+# create profile
+New-Item -Path $PROFILE -Type File -Force
+
+# enable script execution
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+
+# disable script execution
+Set-ExecutionPolicy -ExecutionPolicy Restricted
+
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\chips.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\carver.omp.json" | Invoke-Expression
+```
+10. change opacity
+11. change background image
+12. change title
+13. change ssh settings
 
 # Board Number - 00006 - command, args and environment variable for pods
 1. **Entrypoint (command)**

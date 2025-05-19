@@ -1,0 +1,6 @@
+{
+    "name": ["John", "Anna", "Peter"],
+    "age": [28, 22, 35],
+    "city": ["New York", "Paris", "London"],
+    "is_student": [false, true, false]
+}
